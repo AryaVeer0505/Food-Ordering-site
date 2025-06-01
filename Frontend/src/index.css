@@ -1,0 +1,57 @@
+@import "tailwindcss";
+body {
+  min-height: 100vh;
+}
+.explore-menu-list::-webkit-scrollbar {
+  display: none;
+}
+.food-display-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+}
+.cart-items{
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+}
+.cart-bottom{
+  gap:max(12vw,20px)
+}
+.navbar-profile:hover .navbar-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 15px 25px;
+   border-radius: 4px;
+   border: 1px solid tomato;
+   outline: 2px solid white;
+   list-style: none;
+} 
+.navbar-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+}
+.navbar-profile-dropdown img{
+  width: 20px;
+}
+.navbar-profile-dropdown li:hover{
+   color: tomato;
+}
+
+.spinner{
+  width: 100px;
+  height: 100px;
+  place-self: center;
+  border: 5px solid #bdbdbd;
+  border-top-color: tomato;
+  border-radius: 50%;
+  animation: rotate 1s infinite;
+}
+@keyframes rotate{
+  100%{
+    transform:rotate(360deg);
+  }
+}
